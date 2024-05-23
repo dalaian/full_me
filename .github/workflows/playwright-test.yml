@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest --alluredir=report
+        pytest --alluredir=allure-results
         
     - name: Get Allure history
       uses: actions/checkout@v3
@@ -52,7 +52,7 @@ jobs:
       uses: simple-elf/allure-report-action@v1.7
       if: always()
       with:
-        allure_results: report
+        allure_results: allure-results
         allure_history: allure-history
 
     - name: Deploy report to Github Pages
