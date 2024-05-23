@@ -1,4 +1,6 @@
+import os
 import pytest
+from utils import email
 from playwright.sync_api import expect, Playwright
 
 AUTH_FILE = 'playwright/.auth/user.json'
@@ -25,6 +27,13 @@ def login(create_browser_context, browser):
     page.goto("https://www.saucedemo.com/inventory.html")
     yield page
     context.close()
+
+def pytest_sessionfinish(session, exitstatus):
+    """ 
+    Executes this method when execution finishes
+    """
+    if os.environ.get('CI', False):
+        email.send_email()
 
 
 #################### Not used ####################
