@@ -2,10 +2,11 @@ import os
 import smtplib
 import datetime
 from email.message import EmailMessage
+import pytz
 
 
 def send_email():
-    x = datetime.datetime.now()    
+    x = datetime.datetime.now(pytz.timezone('America/Costa_Rica'))    
     msg = EmailMessage()
     msg.set_content(f'''
         Hi, please review the test report executed on {x.strftime("%c")} by clicking on the following link:
