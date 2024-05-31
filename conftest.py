@@ -3,6 +3,7 @@ import pytest
 from utils import email
 from pathlib import Path
 from playwright.sync_api import expect, Playwright
+import utils.config as config
 
 AUTH_FILE = 'playwright/.auth/user.json'
 
@@ -11,11 +12,11 @@ def create_browser_context(browser, playwright):
     playwright.selectors.set_test_id_attribute("data-test")
     context = browser.new_context()
     page = context.new_page()
-    page.goto("https://www.saucedemo.com")
-    page.get_by_test_id("username").fill("standard_user")
-    page.get_by_placeholder("Password").fill("secret_sauce")
+    page.goto(config.url)
+    page.get_by_test_id("username").fill(config.user_name)
+    page.get_by_placeholder("Password").fill(config.user_pass)
     page.get_by_role("button").click()
-    page.wait_for_url("https://www.saucedemo.com/inventory.html")
+    page.wait_for_url(config.url_logged)
     expect(page.get_by_test_id("title")).to_be_visible()
 
     # Creates the auth file if needed
@@ -29,7 +30,7 @@ def create_browser_context(browser, playwright):
 def login(create_browser_context, browser):
     context = browser.new_context(storage_state=AUTH_FILE)
     page = context.new_page()
-    page.goto("https://www.saucedemo.com/inventory.html")
+    page.goto(config.url_logged)
     yield page
     context.close()
 
@@ -37,7 +38,7 @@ def pytest_sessionfinish(session, exitstatus):
     """ 
     Executes this method when execution finishes
     """
-    if os.environ.get('CI', False):
+    if config.CI:
         email.send_email()
 
 
@@ -45,7 +46,7 @@ def pytest_sessionfinish(session, exitstatus):
 
 @pytest.fixture()
 def navigate(page):
-    page.goto("https://www.saucedemo.com/")
+    page.goto(config.url)
     yield
 
 @pytest.fixture(autouse=True)

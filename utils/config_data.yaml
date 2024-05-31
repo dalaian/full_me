@@ -1,0 +1,14 @@
+url: https://www.saucedemo.com
+url_logged: https://www.saucedemo.com/inventory.html
+
+user:
+  name: standard_user
+  pass: secret_sauce
+
+email:
+  from: dalaianxd@gmail.com
+  pass: ---
+  to: dalaian@outlook.com
+
+# Global configuration
+CI: false
