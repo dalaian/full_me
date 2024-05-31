@@ -47,7 +47,7 @@ def pytest_sessionfinish(session, exitstatus):
 @pytest.fixture()
 def navigate(page):
     page.goto(config.url)
-    yield
+    yield # Test
 
 @pytest.fixture(autouse=True)
 def configure_playwright_test_id_attribute(playwright):
