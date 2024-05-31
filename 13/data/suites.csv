@@ -1,0 +1,19 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri May 31 17:54:32 GMT 2024","Fri May 31 17:54:32 GMT 2024","114","tests","test_login","","","","test_invalid_user[chromium]","
+    Testing invalid user
+    "
+"broken","Fri May 31 17:54:32 GMT 2024","Fri May 31 17:54:32 GMT 2024","0","tests","test_sorting","","","","test_sorting_low_high[chromium]","
+    Testing low high sort
+    "
+"passed","Fri May 31 17:54:31 GMT 2024","Fri May 31 17:54:31 GMT 2024","112","tests","test_login","","","","test_locked_user[chromium]","
+    Testing error when user is locked
+    "
+"passed","Fri May 31 17:54:31 GMT 2024","Fri May 31 17:54:31 GMT 2024","407","tests","test_example","","","","test_get_started_link[chromium]",""
+"broken","Fri May 31 17:54:27 GMT 2024","Fri May 31 17:54:27 GMT 2024","0","tests","test_buying","","","","test_buying[chromium]","
+    This test uses the fixture login to login, and then, buy one item 
+    and verifies the Complete Order title is displayed.
+    "
+"passed","Fri May 31 17:54:32 GMT 2024","Fri May 31 17:54:32 GMT 2024","168","tests","test_login","","","","test_valid_user[chromium]","
+    Testing valid login
+    "
+"passed","Fri May 31 17:54:30 GMT 2024","Fri May 31 17:54:31 GMT 2024","286","tests","test_example","","","","test_has_title[chromium]",""
