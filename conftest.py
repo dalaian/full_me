@@ -1,6 +1,7 @@
 import os
 import pytest
 from utils import email
+from pathlib import Path
 from playwright.sync_api import expect, Playwright
 
 AUTH_FILE = 'playwright/.auth/user.json'
@@ -16,6 +17,10 @@ def create_browser_context(browser, playwright):
     page.get_by_role("button").click()
     page.wait_for_url("https://www.saucedemo.com/inventory.html")
     expect(page.get_by_test_id("title")).to_be_visible()
+
+    # Creates the auth file if needed
+    Path(AUTH_FILE).parent.mkdir(parents=True, exist_ok=True)
+    Path(AUTH_FILE).touch()
 
     context.storage_state(path=AUTH_FILE)
     yield context
