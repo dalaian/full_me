@@ -1,9 +1,11 @@
+import pytest
 from playwright.sync_api import expect
 
 
+@pytest.mark.sanity
 def test_buying(login):
     """
-    This test uses the fixture login to login, and then, buy one item 
+    This test uses the fixture login to login, and then, buy one item
     and verifies the Complete Order title is displayed.
     """
     page = login

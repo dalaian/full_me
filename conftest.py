@@ -41,6 +41,14 @@ def pytest_sessionfinish(session, exitstatus):
     if config.CI:
         email.send_email()
 
+def pytest_configure(config):
+    config.addinivalue_line(
+        "markers", "sanity: test that is part of the sanity testing"
+    )
+    config.addinivalue_line(
+        "markers", "regression: test that is part of the regression testing"
+    )
+
 
 #################### Not used ####################
 
