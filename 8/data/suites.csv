@@ -1,19 +1,17 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Thu May 23 18:11:41 GMT 2024","Thu May 23 18:11:41 GMT 2024","75","","test_sorting","","","","test_sorting_low_high[chromium]","
+"passed","Wed Jun 19 23:54:21 GMT 2024","Wed Jun 19 23:54:21 GMT 2024","121","tests","test_login","","","","test_locked_user[chromium]","
+    Testing error when user is locked
+    "
+"passed","Wed Jun 19 23:54:22 GMT 2024","Wed Jun 19 23:54:22 GMT 2024","62","tests","test_sorting","","","","test_sorting_low_high[chromium]","
     Testing low high sort
     "
-"passed","Thu May 23 18:11:39 GMT 2024","Thu May 23 18:11:39 GMT 2024","326","","test_example","","","","test_has_title[chromium]",""
-"passed","Thu May 23 18:11:40 GMT 2024","Thu May 23 18:11:40 GMT 2024","126","","test_login","","","","test_invalid_user[chromium]","
+"passed","Wed Jun 19 23:54:21 GMT 2024","Wed Jun 19 23:54:21 GMT 2024","121","tests","test_login","","","","test_invalid_user[chromium]","
     Testing invalid user
     "
-"passed","Thu May 23 18:11:39 GMT 2024","Thu May 23 18:11:39 GMT 2024","425","","test_example","","","","test_get_started_link[chromium]",""
-"passed","Thu May 23 18:11:40 GMT 2024","Thu May 23 18:11:41 GMT 2024","168","","test_login","","","","test_valid_user[chromium]","
+"passed","Wed Jun 19 23:54:21 GMT 2024","Wed Jun 19 23:54:22 GMT 2024","179","tests","test_login","","","","test_valid_user[chromium]","
     Testing valid login
     "
-"passed","Thu May 23 18:11:38 GMT 2024","Thu May 23 18:11:39 GMT 2024","341","","test_buying","","","","test_buying[chromium]","
-    This test uses the fixture login to login, and then, buy one item 
+"passed","Wed Jun 19 23:54:20 GMT 2024","Wed Jun 19 23:54:20 GMT 2024","334","tests","test_buying","","","","test_buying[chromium]","
+    This test uses the fixture login to login, and then, buy one item
     and verifies the Complete Order title is displayed.
-    "
-"passed","Thu May 23 18:11:40 GMT 2024","Thu May 23 18:11:40 GMT 2024","124","","test_login","","","","test_locked_user[chromium]","
-    Testing error when user is locked
     "
