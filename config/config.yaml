@@ -12,3 +12,8 @@ email:
 
 # Global configuration
 CI: false
+send_email: false
+
+# Test
+test:
+  url: https://espanol.kaiserpermanente.org/es/hawaii/front-door

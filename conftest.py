@@ -1,4 +1,3 @@
-import os
 import pytest
 from utils import email
 from pathlib import Path
@@ -38,7 +37,7 @@ def pytest_sessionfinish(session, exitstatus):
     """ 
     Executes this method when execution finishes
     """
-    if config.CI:
+    if config.CI and config.send_email:
         email.send_email()
 
 def pytest_configure(config):
