@@ -9,7 +9,7 @@ AUTH_FILE = 'playwright/.auth/user.json'
 @pytest.fixture(scope='session')
 def create_browser_context(browser, playwright):
     playwright.selectors.set_test_id_attribute("data-test")
-    context = browser.new_context()
+    context = browser.new_context(record_video_dir="videos/")
     page = context.new_page()
     page.goto(config.url)
     page.get_by_test_id("username").fill(config.user_name)
@@ -27,7 +27,7 @@ def create_browser_context(browser, playwright):
 
 @pytest.fixture()
 def login(create_browser_context, browser):
-    context = browser.new_context(storage_state=AUTH_FILE)
+    context = browser.new_context(storage_state=AUTH_FILE, record_video_dir="videos/")
     page = context.new_page()
     page.goto(config.url_logged)
     yield page

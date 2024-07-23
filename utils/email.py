@@ -11,14 +11,17 @@ def send_email():
     to = config.email_to
     msg.set_content(
         f"""
-        Hi, please review the test report executed on {x.strftime("%c")} by clicking on the following link:
+        Hi Team,
+
+        The automated regression tests have completed successfully on {x.strftime("%c")}. You can access the test report using the following link:
 
         https://dalaian.github.io/full_me/
 
-        Regards,
+        Please review the results and let me know if you have any questions or concerns.
+        Best regards,
 
         QA Team
-         """
+        """
     )
 
     msg["Subject"] = "Testing report"

@@ -44,3 +44,10 @@ jobs:
         CI: true
       run: |
         poetry run pytest -m sanity
+    
+    - name: Upload video artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: workflow-videos
+        path: videos/
+      
