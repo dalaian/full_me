@@ -64,3 +64,10 @@ jobs:
         PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: allure-history
+
+    - name: Upload video artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: workflow-videos
+        path: videos/
+        
