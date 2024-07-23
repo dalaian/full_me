@@ -2,7 +2,7 @@ import os
 import yaml
 
 
-with open("./utils/config_data.yaml", "r") as file:
+with open("./config/config.yaml", "r") as file:
     config = yaml.safe_load(file)
 
 
@@ -20,3 +20,4 @@ email_to = os.environ.get("EMAIL", config["email"]["to"])
 
 # Configuration
 CI = os.environ.get("CI", config["CI"])
+send_email = os.environ.get("send_email", config["send_email"])
