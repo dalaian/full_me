@@ -1,0 +1,19 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jul 23 02:40:27 GMT 2024","Tue Jul 23 02:40:27 GMT 2024","388","tests.examples","test_example","","","","test_has_title[chromium]",""
+"passed","Tue Jul 23 02:40:29 GMT 2024","Tue Jul 23 02:40:29 GMT 2024","165","tests.examples","test_login","","","","test_valid_user[chromium]","
+    Testing valid login
+    "
+"passed","Tue Jul 23 02:40:27 GMT 2024","Tue Jul 23 02:40:27 GMT 2024","335","tests.examples","test_buying","","","","test_buying[chromium]","
+    This test uses the fixture login to login, and then, buy one item
+    and verifies the Complete Order title is displayed.
+    "
+"passed","Tue Jul 23 02:40:30 GMT 2024","Tue Jul 23 02:40:30 GMT 2024","60","tests.examples","test_sorting","","","","test_sorting_low_high[chromium]","
+    Testing low high sort
+    "
+"passed","Tue Jul 23 02:40:29 GMT 2024","Tue Jul 23 02:40:29 GMT 2024","160","tests.examples","test_login","","","","test_invalid_user[chromium]","
+    Testing invalid user
+    "
+"passed","Tue Jul 23 02:40:28 GMT 2024","Tue Jul 23 02:40:28 GMT 2024","154","tests.examples","test_login","","","","test_locked_user[chromium]","
+    Testing error when user is locked
+    "
+"passed","Tue Jul 23 02:40:28 GMT 2024","Tue Jul 23 02:40:28 GMT 2024","419","tests.examples","test_example","","","","test_get_started_link[chromium]",""
