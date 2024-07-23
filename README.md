@@ -55,7 +55,6 @@ poetry run pytest --alluredir=allure-results
 Tests are written using the pytest framework. Place your test files in the tests directory. Here's an example of a basic test:
 ```python
 @pytest.mark.sanity
-
 def test_default_login(login):
     page = login
     expect(page.get_by_text("Swag Labs")).to_be_visible()
@@ -74,6 +73,11 @@ The directory structure of the framework is organized as follows:
 ```plaintext
 full_me/
 │
+├── .github/
+│   └── workflows/
+│       └── sanity-testing.yml
+├── .vscode/
+│   └── settings.json
 ├── config/
 │   └── config.yaml
 ├── tests/
@@ -82,9 +86,6 @@ full_me/
 ├── utils/
 │   └── config.py
 │   └── email.py
-├── .github/
-│   └── workflows/
-│       └── sanity-testing.yml
 ├── .gitignore
 ├── conftest.py
 ├── pyproject.toml
